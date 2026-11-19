@@ -12,6 +12,7 @@
   ],
   "external_exec": [
     "confogl_personalize.cfg",
-    "confogl_rates.cfg"
+    "confogl_rates.cfg",
+    "cvar_tracking.cfg"
   ]
 }

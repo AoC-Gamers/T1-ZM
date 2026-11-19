@@ -1,4 +1,4 @@
-# Tier1 ZoneMod v2.8.9e
+# Tier1 ZoneMod v2.9.2b
 
 [EN] [translation](https://translate.google.com/translate?sl=es&tl=en&u=https://github.com/AoC-Gamers/t1_zm)
 
@@ -6,12 +6,13 @@
 
 ## Características
 
-### Diferencia con ZoneMod
-- Se reemplaza el sistema de bonus de zonemod por el oficial.
-- Se eliminan las restricciones para las armas smg, shotgun
-- Se eliminan las restricciones de reaparición de infectado bot.
-- El rango de lerps para la interpolación es de 0 a 100.
-- Se podrá cancelar el inicio de readyup solo 1 vez.
+Tier1 ZM se basa en ZoneMod 4v4 v2.9.2b. Sus reglas propias son:
+
+- Bonus oficial del juego.
+- Sin cuotas de SMG ni de escopetas.
+- Reaparición de infectados bot habilitada.
+- Lerp de 0 a 100 ms.
+- Pausa manual disponible. Se omite la pausa automática.
 
 ## Instalación
 1. T1 ZM requiere el proyecto base [L4D2-Competitive-Rework](https://github.com/SirPlease/L4D2-Competitive-Rework). Descárgalo e instálalo primero.

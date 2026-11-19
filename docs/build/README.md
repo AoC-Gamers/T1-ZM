@@ -20,8 +20,9 @@ El ZIP contiene `cfg/cfgogl/t1_zm/` y los documentos raíz del producto.
 Copia la carpeta del modo al directorio `left4dead2/cfg/cfgogl/` y registra
 `t1_zm` según el [README](../../README.md).
 
-L4D2-Competitive-Rework aporta Confogl, ReadyUp, los plugins que se cargan
-desde las configuraciones y el árbol `cfg/stripper/zonemod`. El perfil de
+L4D2-Competitive-Rework aporta Confogl, ReadyUp, Plugin Manager,
+la configuración de validación de clientes `cfg/cvar_tracking.cfg`,
+los plugins del modo y el árbol `cfg/stripper/zonemod`. El perfil de
 servidor aporta `confogl_rates.cfg` y `confogl_personalize.cfg`. Verifica su
 disponibilidad y la de los plugins con los nombres exactos antes de activar el
 modo. La compatibilidad del conjunto se comprueba en SRCDS cargando y
