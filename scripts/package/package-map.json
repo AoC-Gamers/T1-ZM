@@ -1,0 +1,17 @@
+{
+  "mode": "t1_zm",
+  "configs": [
+    "confogl.cfg",
+    "confogl_off.cfg",
+    "confogl_plugins.cfg",
+    "mapinfo.txt",
+    "shared_cvars.cfg",
+    "shared_plugins.cfg",
+    "shared_settings.cfg",
+    "t1_zm.cfg"
+  ],
+  "external_exec": [
+    "confogl_personalize.cfg",
+    "confogl_rates.cfg"
+  ]
+}

@@ -1,0 +1,38 @@
+name: Package game mode
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  RELEASE_BASENAME: t1-zm-${{ github.sha }}
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Build and validate the game mode ZIP
+        run: |
+          make validate-modes
+          make release
+          make validate-artifact
+
+      - name: Upload validated ZIP
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ env.RELEASE_BASENAME }}
+          path: dist/release/${{ env.RELEASE_BASENAME }}.zip
+          if-no-files-found: error
+          overwrite: true
