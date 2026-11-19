@@ -7,8 +7,7 @@ Consulta [el índice de documentación](docs/README.md) y
 - Declara los archivos instalables en `scripts/package/package-map.json`.
   Usa el Makefile raíz para validar y empaquetar en `.build/` y `dist/`.
 - Mantén los proveedores de juego como prerrequisitos y conserva autoría y licencias.
-- Distingue la validación offline de la aceptación en SRCDS.
-  Los cambios remotos y el despliegue requieren autorización.
+- Los cambios remotos y el despliegue requieren autorización.
 
 ## Actualizar la base de ZoneMod
 
@@ -21,7 +20,6 @@ Consulta [el índice de documentación](docs/README.md) y
    con la nueva base. Actualiza el mapa de empaquetado si cambian los archivos
    instalables o los destinos externos de `exec`.
 3. Ejecuta `make validate-modes`, `make release` y `make validate-artifact`.
-   Registra por separado la prueba de carga, inicio y descarga en SRCDS.
    Actualiza la revisión de origen en la referencia técnica y usa la misma
    versión de ZoneMod en las cabeceras de los CFG, el título de ReadyUp y el
    README. Revisa el changelog. Mantén la atribución a ZoneMod en

@@ -25,11 +25,9 @@ la configuración de validación de clientes `cfg/cvar_tracking.cfg`,
 los plugins del modo y el árbol `cfg/stripper/zonemod`. El perfil de
 servidor aporta `confogl_rates.cfg` y `confogl_personalize.cfg`. Verifica su
 disponibilidad y la de los plugins con los nombres exactos antes de activar el
-modo. La compatibilidad del conjunto se comprueba en SRCDS cargando y
-descargando `t1_zm` y verificando la aplicación y restauración de las cvars.
+modo.
 
 El ZIP local se genera sin SDK y sirve para comprobar el contenido del paquete.
-La validación de proveedores y el ensayo en SRCDS son pasos de integración.
 
 El validador comprueba el texto de la licencia GNU y el enlace CC BY-SA 3.0
 en `NOTICES.md` antes de empaquetar.

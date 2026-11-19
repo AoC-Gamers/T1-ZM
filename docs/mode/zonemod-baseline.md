@@ -21,4 +21,4 @@ La sincronización adopta las reglas y el orden de carga de ZoneMod 4v4. Las var
 
 La identidad de T1 se refleja en las rutas de Confogl, el nombre `t1_zm.cfg` y el título de ReadyUp. ReadyUp usa el plugin estándar de ZoneMod y su política de cancelación. La sincronización también incorporó `mapinfo.txt`, la descarga con `pm_unload_plugins refresh` y la ejecución de `cvar_tracking.cfg`. La base aporta Plugin Manager, Stripper y ese CFG de validación de clientes. El [mapa de empaquetado](../../scripts/package/package-map.json) declara las llamadas a CFG externos.
 
-Para la revisión indicada arriba se verificaron el diff de los CFG activos, las referencias a plugins en la base local y el ZIP de configuración. La prueba en SRCDS queda pendiente.
+Para la revisión indicada arriba se verificaron el diff de los CFG activos, las referencias a plugins en la base local y el ZIP de configuración.
