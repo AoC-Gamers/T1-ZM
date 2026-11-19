@@ -17,6 +17,22 @@ PROJECT_FILES = (Path("README.md"), Path("LICENSE"), Path("NOTICES.md"))
 EXEC = re.compile(r'^\s*exec\s+(?:"([^"]+)"|([^\s;"]+))', re.IGNORECASE)
 
 
+def validate_legal_files(root: Path) -> None:
+    license_text = (root / "LICENSE").read_text(encoding="utf-8-sig")
+    markers = (
+        "GNU GENERAL PUBLIC LICENSE",
+        "Version 3, 29 June 2007",
+        "Preamble",
+        "END OF TERMS AND CONDITIONS",
+    )
+    if not all(marker in license_text for marker in markers):
+        raise ValueError("LICENSE must contain the full GPLv3 text")
+
+    notices = (root / "NOTICES.md").read_text(encoding="utf-8-sig")
+    if "https://creativecommons.org/licenses/by-sa/3.0/" not in notices:
+        raise ValueError("NOTICES.md must link to CC BY-SA 3.0 for the mode configuration")
+
+
 def load_product(root: Path) -> set[Path]:
     manifest = json.loads((root / MAP_PATH).read_text(encoding="utf-8"))
     mode = manifest["mode"]
@@ -43,6 +59,7 @@ def load_product(root: Path) -> set[Path]:
         source = root / relative
         if not source.is_file() or not source.stat().st_size:
             raise ValueError(f"Missing or empty product file: {relative}")
+    validate_legal_files(root)
     for relative in sorted(configs):
         if relative.suffix == ".cfg":
             for number, line in enumerate((root / relative).read_text(encoding="utf-8-sig").splitlines(), 1):

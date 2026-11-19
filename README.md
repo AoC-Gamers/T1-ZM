@@ -15,7 +15,7 @@
 
 ## Instalación
 1. T1 ZM requiere el proyecto base [L4D2-Competitive-Rework](https://github.com/SirPlease/L4D2-Competitive-Rework). Descárgalo e instálalo primero.
-2. Prepara un ZIP local con la [guía de distribución](docs/build/README.md).
+2. Genera el ZIP local con `make release` y compruébalo con `make validate-artifact`.
 3. Copia `cfg/cfgogl/t1_zm/` al directorio `left4dead2/cfg/cfgogl/` del servidor.
 4. Registra el modo según la sección de configuración y reinicia el servidor.
 

@@ -30,6 +30,9 @@ descargando `t1_zm` y verificando la aplicación y restauración de las cvars.
 El ZIP local se genera sin SDK y sirve para comprobar el contenido del paquete.
 La validación de proveedores y el ensayo en SRCDS son pasos de integración.
 
+El validador comprueba el texto de la licencia GNU y el enlace CC BY-SA 3.0
+en `NOTICES.md` antes de empaquetar.
+
 ## GitHub Actions
 
 El [workflow de empaquetado](../../.github/workflows/mode-package.yml) ejecuta
